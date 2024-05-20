@@ -1,0 +1,55 @@
+{
+    "name": "processton-io/processton-interaction",
+    "description": "This package will generate interaction",
+    "version": "1.0.0",
+    "keywords": [
+        "processton-io",
+        "processton",
+        "processton-interaction"
+    ],
+    "homepage": "https://github.com/processton-io/processton-interaction",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ahmad Faryab Kokab",
+            "email": "ahmadkokab@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Processton\\ProcesstonInteraction\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Processton\\ProcesstonInteraction\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Processton\\ProcesstonInteraction\\ProcesstonInteractionServiceProvider"
+            ],
+            "aliases": {
+                "ProcesstonInteraction": "Processton\\ProcesstonInteraction\\ProcesstonInteractionFacade"
+            }
+        }
+    }
+}
